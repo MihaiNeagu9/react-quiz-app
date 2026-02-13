@@ -1,11 +1,8 @@
-import quizLogo from "./assets/quiz-logo.png";
+import Header from "./components/Header.jsx";
 
 function App() {
     return (
-        <header>
-            <img src={quizLogo} alt="quiz logo" />
-            <h1>Quiz</h1>
-        </header>
+        <Header />
     );
 }
 
