@@ -1,22 +1,12 @@
 import Header from "./components/Header.jsx";
+import Quiz from "./components/Quiz.jsx";
 
 function App() {
     return (
         <>
         <Header />
 
-        <div id="quiz">
-            <div id="question">
-                <h2>Question ?</h2>
-            </div>
-
-            <ol id="answers">
-                <li className="answer"><button>Response 1</button></li>
-                <li className="answer"><button>Response 2</button></li>
-                <li className="answer"><button>Response 3</button></li>
-                <li className="answer"><button>Response 4</button></li>
-            </ol>
-        </div>
+        <Quiz />
         </>
     );
 }
