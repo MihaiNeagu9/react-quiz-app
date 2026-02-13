@@ -1,4 +1,4 @@
-# 📚 Quiz App - React Project 
+# ❓ Quiz App - React Project 
 
 **Quiz App** is a React practice project focused on building an interactive multiple-choice quiz experience.  
 The project is scaffolded with Vite and includes a complete visual style system for quiz flow, answers, and final summary screens.
