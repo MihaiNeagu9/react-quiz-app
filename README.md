@@ -9,11 +9,22 @@ This project is intended to demonstrate practical skills in **React state manage
 
 ## 🔍 Overview
 
-- Client-side React application (Vite)
-- Interactive quiz flow with answer states
-- Result-oriented UI design already prepared in CSS
-- Minimal setup for learning-focused implementation
-- Component-friendly structure for future extension
+Current Phase
+
+- Main app structure with `Header` and `Quiz` components in `src/App.jsx`
+- Quiz data extracted into `src/data-question.js`
+- Current question rendered from the data source (`QUESTION_DATA[0]`)
+- Answers rendered dynamically with `map()` as buttons
+- Base styling and assets are already included in the project
+
+In Progress
+
+- Navigation between multiple questions
+- Storing selected answers in state
+- Score calculation and final summary screen
+- Correct/wrong/skipped visual states based on user interaction
+- Quiz restart functionality
+
 
 ---
 
@@ -64,11 +75,11 @@ Screenshots coming soon...
 |-- public/
 |-- src/
 |   |-- assets/
-|   |   |-- quiz-complete.png
-|   |   `-- quiz-logo.png
 |   |-- components/
-|   |
+|   |   |-- Header.jsx
+|   |   `-- Quiz.jsx
 |   |-- App.jsx
+|   |-- data-question.js
 |   |-- index.css
 |   `-- main.jsx
 |-- index.html
@@ -101,12 +112,7 @@ http://localhost:5173
 
 ## 🚀 Possible Enhancements
 
-- Extract quiz data into a dedicated module (questions.js / questions.json)
-- Split App.jsx into reusable components (Header, Question, Answers, Summary)
-- Add persistent score history in localStorage
-- Add timer per question and difficulty levels
-- Add unit/integration tests for quiz logic
-- Add accessibility improvements (keyboard navigation and ARIA semantics)
+- 
 
 ---
 
