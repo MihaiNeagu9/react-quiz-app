@@ -1,6 +1,14 @@
 export const QUESTION_DATA = [
-    {question: "question 1", answers: ["answer 1", "answer 2", "answer 3", "answer 4"]},
-    {question: "question 2", answers: ["answer 1", "answer 2", "answer 3", "answer 4"]},
-    {question: "question 3", answers: ["answer 1", "answer 2", "answer 3", "answer 4"]},
-    {question: "question 4", answers: ["answer 1", "answer 2", "answer 3", "answer 4"]},
+    {
+        question: "What is the capital city of Canada?",
+        answers: ["Ottawa", "Toronto", "Vancouver", "Montreal"],
+    },
+    {
+        question: "Which planet is known as the Red Planet?",
+        answers: ["Mars", "Jupiter", "Venus", "Saturn"],
+    },
+    {
+        question: "Who wrote the play 'Romeo and Juliet'?",
+        answers: ["William Shakespeare", "Charles Dickens", "Jane Austen", "Mark Twain"],
+    },
 ];
