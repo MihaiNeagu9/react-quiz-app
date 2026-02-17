@@ -16,6 +16,7 @@ Current Phase
 - Current question rendered from the data source (`QUESTION_DATA[0]`)
 - Answers rendered dynamically with `map()` as buttons
 - Base styling and assets are already included in the project
+- Quiz is timed. The progress bar shows the remaining time for the current question
 
 In Progress
 
