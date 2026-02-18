@@ -20,7 +20,7 @@ function App() {
         <>
         <Header />
 
-        {quizIsComplete ? <Summary userAnswers={userAnswers} /> : <Quiz onAnswerClick={handleAnswerClick} questionIndex={userAnswers} />}
+        {quizIsComplete ? <Summary userAnswers={userAnswers} /> : <Quiz onAnswerClick={handleAnswerClick} userAnswers={userAnswers} />}
         </>
     );
 }

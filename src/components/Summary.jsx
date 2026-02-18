@@ -11,7 +11,7 @@ export default function Summary({ userAnswers }) {
                     return (<li key={indexAnswer}>
                         <h3>{indexAnswer + 1}</h3>
                         <p className="question">{QUESTION_DATA[indexAnswer].question}</p>
-                        <p className="user-answer">{answer}</p>
+                        <p className="user-answer">{answer ?? "No answer"}</p>
                     </li>);
                 })}
             </ol>
