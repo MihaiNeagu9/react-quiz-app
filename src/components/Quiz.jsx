@@ -6,7 +6,7 @@ const timeMaximum = 100;
 export default function Quiz({ onAnswerClick, questionIndex }) {
     const [timeRemaining, setTimeRemaining] = useState(timeMaximum);
 
-    const currentQuestion = QUESTION_DATA[questionIndex];
+    const currentQuestion = QUESTION_DATA[questionIndex.length];
 
     useEffect(() => {
         if (timeRemaining <= 0) return;
