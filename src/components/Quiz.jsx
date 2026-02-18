@@ -3,8 +3,7 @@ import { QUESTION_DATA } from "../data-question.js";
 
 const timeMaximum = 100;
 
-export default function Quiz() {
-    const [questionIndex, setQuestionIndex] = useState(0);
+export default function Quiz({ onAnswerClick, questionIndex }) {
     const [timeRemaining, setTimeRemaining] = useState(timeMaximum);
 
     const currentQuestion = QUESTION_DATA[questionIndex];
@@ -23,17 +22,9 @@ export default function Quiz() {
 
     useEffect(() => {
         setTimeRemaining(timeMaximum);
-    }, [questionIndex]);
+    }, []);
 
     console.log(timeRemaining);
-
-    function handleAnswerClick() {
-        if (questionIndex + 1 === QUESTION_DATA.length) {
-            setQuestionIndex(0);
-        } else {
-            setQuestionIndex(questionIndex + 1);
-        }
-    }
 
     return (
     <div id="quiz">
@@ -45,7 +36,7 @@ export default function Quiz() {
 
         <ol id="answers">
             {currentQuestion.answers.map((answer, indexAnswer) => {
-                return(<li key={indexAnswer} className="answer"><button onClick={handleAnswerClick}>{answer}</button></li>)
+                return(<li key={indexAnswer} className="answer"><button onClick={() => onAnswerClick(answer)}>{answer}</button></li>)
             })}
         </ol>
     </div>

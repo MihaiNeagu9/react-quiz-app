@@ -1,26 +1,19 @@
 import quizComplete from "../assets/quiz-complete.png";
+import { QUESTION_DATA } from "../data-question.js";
 
-export default function Summary() {
+export default function Summary({ userAnswers }) {
     return (
         <div id="summary">
             <img src={quizComplete} alt="Quiz Complete Trophy" />
             <h2>Quiz Completed!</h2>
             <ol>
-                <li>
-                    <h3>1</h3>
-                    <p className="question">What is the capital city of Canada?</p>
-                    <p className="user-answer">User Answer</p>
-                </li>
-                <li>
-                    <h3>2</h3>
-                    <p className="question">Which planet is known as the Red Planet?</p>
-                    <p className="user-answer">User Answer</p>
-                </li>
-                <li>
-                    <h3>3</h3>
-                    <p className="question">Who wrote the play 'Romeo and Juliet'?</p>
-                    <p className="user-answer">User Answer</p>
-                </li>
+                {userAnswers.map((answer, indexAnswer) => {
+                    return (<li key={indexAnswer}>
+                        <h3>{indexAnswer + 1}</h3>
+                        <p className="question">{QUESTION_DATA[indexAnswer].question}</p>
+                        <p className="user-answer">{answer}</p>
+                    </li>);
+                })}
             </ol>
         </div>
     );
