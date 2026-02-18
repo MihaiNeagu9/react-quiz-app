@@ -1,6 +1,8 @@
 import quizComplete from "../assets/quiz-complete.png";
 import { QUESTION_DATA } from "../data-question.js";
 
+const CORRECT_ANSWERS = ["Ottawa", "Mars", "William Shakespeare"];
+
 export default function Summary({ userAnswers }) {
     return (
         <div id="summary">
@@ -11,7 +13,7 @@ export default function Summary({ userAnswers }) {
                     return (<li key={indexAnswer}>
                         <h3>{indexAnswer + 1}</h3>
                         <p className="question">{QUESTION_DATA[indexAnswer].question}</p>
-                        <p className="user-answer">{answer ?? "No answer"}</p>
+                        <p className={CORRECT_ANSWERS.includes(answer) ? "user-answer correct" : "user-answer wrong"}>{answer ?? "No answer"}</p>
                     </li>);
                 })}
             </ol>
