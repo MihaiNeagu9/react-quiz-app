@@ -135,6 +135,20 @@ header h1 {
   color: #c1b2dd;
 }
 
+#question progress.warning {
+  background: #f0c53a;
+}
+#question progress.warning::-webkit-progress-value {
+  background: #f0c53a;
+}
+
+#question progress.danger {
+  background: #e63946;
+}
+#question progress.danger::-webkit-progress-value {
+  background: #e63946;
+}
+
 #answers {
   list-style: none;
   margin: 0;

@@ -8,6 +8,13 @@ export default function Quiz({ onAnswerClick, userAnswers }) {
 
     const currentQuestion = QUESTION_DATA[userAnswers.length];
 
+    let progressClass = "";
+    if (timeRemaining <= 2000) {
+        progressClass = "danger";
+    } else if (timeRemaining <= 6000) {
+        progressClass = "warning";
+    }
+
     useEffect(() => {
         const endTime = Date.now() + TIME_LIMIT;
         let animationFrameId;
@@ -37,8 +44,7 @@ export default function Quiz({ onAnswerClick, userAnswers }) {
     return (
     <div id="quiz">
         <div id="question">
-            <progress value={timeRemaining} max={TIME_LIMIT}></progress>
-            <p>{(timeRemaining / 1000).toFixed(1)}s</p>
+            <progress className={progressClass} value={timeRemaining} max={TIME_LIMIT}></progress>
             <h2>{currentQuestion.question}</h2>
         </div>
 
