@@ -11,6 +11,7 @@ export default function Quiz({ onAnswerClick, userAnswers }) {
     useEffect(() => {
         if (timeRemaining <= 0) {
             onAnswerClick(undefined);
+            return;
         };
 
         const interval = setInterval(() => {
