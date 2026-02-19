@@ -1,16 +1,15 @@
 import quizComplete from "../assets/quiz-complete.png";
 import { QUESTION_DATA } from "../data-question.js";
+import { CORRECT_ANSWERS } from "../data-question.js";
 
 import Score from "./Score.jsx";
-
-const CORRECT_ANSWERS = ["Ottawa", "Mars", "William Shakespeare"];
 
 export default function Summary({ userAnswers }) {
     return (
         <div id="summary">
             <img src={quizComplete} alt="Quiz Complete Trophy" />
             <h2>Quiz Completed!</h2>
-            <Score />
+            <Score userAnswers={userAnswers} />
             <ol>
                 {userAnswers.map((answer, indexAnswer) => {
                     return (<li key={indexAnswer}>

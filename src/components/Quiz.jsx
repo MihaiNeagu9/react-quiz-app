@@ -39,8 +39,6 @@ export default function Quiz({ onAnswerClick, userAnswers }) {
 
     }, [userAnswers.length]);
 
-    console.log(timeRemaining);
-
     return (
     <div id="quiz">
         <div id="question">

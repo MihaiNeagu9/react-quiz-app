@@ -12,3 +12,5 @@ export const QUESTION_DATA = [
         answers: ["William Shakespeare", "Charles Dickens", "Jane Austen", "Mark Twain"],
     },
 ];
+
+export const CORRECT_ANSWERS = ["Ottawa", "Mars", "William Shakespeare"];
