@@ -9,11 +9,12 @@ function App() {
     const [userAnswers, setUserAnswers] = useState([]);
 
     function handleAnswerClick(answer) {
-        if (prevUserAnswers.length >= QUESTION_DATA.length) {
-            return prevUserAnswers;
-        }
-
-        setUserAnswers((prevUserAnswers) => { return [...prevUserAnswers, answer]});
+        setUserAnswers((prevUserAnswers) => {
+            if (prevUserAnswers.length >= QUESTION_DATA.length) {
+                return prevUserAnswers;
+            }
+            
+            return [...prevUserAnswers, answer]});
     }
 
     console.log(userAnswers);
