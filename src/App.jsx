@@ -9,18 +9,25 @@ function App() {
     const [userAnswers, setUserAnswers] = useState([]);
 
     function handleAnswerClick(answer) {
+        if (prevUserAnswers.length >= QUESTION_DATA.length) {
+            return prevUserAnswers;
+        }
+
         setUserAnswers((prevUserAnswers) => { return [...prevUserAnswers, answer]});
     }
 
     console.log(userAnswers);
 
-    const quizIsComplete = userAnswers.length === QUESTION_DATA.length;
+    const quizIsComplete = userAnswers.length >= QUESTION_DATA.length;
 
     return (
         <>
         <Header />
 
-        {quizIsComplete ? <Summary userAnswers={userAnswers} /> : <Quiz onAnswerClick={handleAnswerClick} userAnswers={userAnswers} />}
+        {quizIsComplete ? 
+        <Summary userAnswers={userAnswers} /> : 
+        <Quiz onAnswerClick={handleAnswerClick} userAnswers={userAnswers} 
+        />}
         </>
     );
 }
