@@ -21,6 +21,7 @@ export default function Quiz({ onAnswerClick, userAnswers }) {
         return () => {
             clearInterval(interval);
         }
+        
     }, [timeRemaining]);
 
     useEffect(() => {
