@@ -13,7 +13,7 @@ export default function Summary({ userAnswers }) {
                     return (<li key={indexAnswer}>
                         <h3>{indexAnswer + 1}</h3>
                         <p className="question">{QUESTION_DATA[indexAnswer].question}</p>
-                        <p className={CORRECT_ANSWERS.includes(answer) ? "user-answer correct" : "user-answer wrong"}>{answer ?? "No answer"}</p>
+                        <p className={answer === CORRECT_ANSWERS[indexAnswer] ? "user-answer correct" : "user-answer wrong"}>{answer ?? "No answer"}</p>
                     </li>);
                 })}
             </ol>
